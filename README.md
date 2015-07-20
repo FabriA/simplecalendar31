@@ -1,2 +1,2 @@
 # simplecalendar3
-SimpleCalendar 3.x
+SimpleCalendar 3.x Joomla component
