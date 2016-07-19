@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="com_simplecalendar" default="dist" basedir=".">
+	<!-- Set the date/timestamp -->
+	<tstamp />
+
+	<!-- Set extension params	-->
+	<property name="build.basedir" value="c:/xampp7/htdocs/joomla351/" />
+	<property name="build.builddir" value="c:/Archivio/JoomlaBuilds" />
+	<property name="build.extdir" value="components" />
+	<property name="build.shorttype" value="com" />
+	<property name="build.name" value="simplecalendar" />
+	<property name="build.version" value="3.1.5" />
+	<property name="build.zipdeployfile"
+	          value="${build.builddir}/${build.shorttype}_${build.name}_${build.version}_${DSTAMP}" />
+
+	<property name="src" value="." />
+	<property name="test_admin"
+	          value="${build.basedir}/administrator/${build.extdir}/${build.shorttype}_${build.name}" />
+	<property name="test_component"
+	          value="${build.basedir}/${build.extdir}/${build.shorttype}_${build.name}" />
+
+	<fileset dir="." id="zipfiles">
+		<exclude name="build.xml" />
+		<exclude name=".buildpath" />
+		<exclude name=".project" />
+		<exclude name=".settings/**" />
+		<exclude name=".externalToolBuilders/**" />
+		<exclude name="component/.project" />
+		<exclude name="component/src/**" />
+		<include name="**/**" />
+	</fileset>
+
+	<fileset dir="./admin" id="admin">
+		<include name="**/**" />
+	</fileset>
+
+	<fileset dir="./site" id="component">
+		<exclude name=".project" />
+		<exclude name="src/**" />
+		<include name="**/**" />
+	</fileset>
+
+	<!-- ============================================  -->
+	<!-- (DEFAULT)  Target: copy_all 				   -->
+	<!-- ============================================  -->
+	<target name="copy_all" description="Copies files to test project." >
+		<echo message="Running build.xml. Copying files from dev to test..." />
+		<copy todir="${test_admin}">
+			<fileset refid="admin" />
+		</copy>
+		<echo message="Running build.xml. Copying XML file to test_admin" />
+		<copy file="./com_simplecalendar.xml" todir="${test_admin}" />
+		<echo message="Running build.xml. Copying language files to test_admin" />
+		<copy file="admin/language/it-IT/it-IT.com_simplecalendar.ini" todir="${build.basedir}/administrator/language/it-IT" />
+		<copy file="admin/language/it-IT/it-IT.com_simplecalendar.sys.ini" todir="${build.basedir}/administrator/language/it-IT" />
+		<copy file="site/language/it-IT/it-IT.com_simplecalendar.ini" todir="${build.basedir}/language/it-IT" />
+		<copy todir="${test_component}">
+			<fileset refid="component" />
+		</copy>
+	</target>
+
+
+	<!-- ============================================  -->
+	<!--  Target: dist                                 -->
+	<!-- ============================================  -->
+	<target name="dist" depends="copy_all">
+		<echo msg="Removing previous archive..." />
+		<delete file="${build.zipdeployfile}.zip" quiet="true" />
+		<echo msg="Creating archive..." />
+		<zip destfile="${build.zipdeployfile}.zip">
+			<fileset refid="zipfiles" />
+		</zip>
+		<!-- ALTERNATE : TAR.GZ file deployment -->
+		<!-- <delete file="${build.zipdeployfile}.tar.gz" quiet="true" />-->
+		<!-- <tar destfile="${build.zipdeployfile}.tar.gz" compression="gzip">-->
+			<!-- <fileset refid="zipfiles" />-->
+		<!-- </tar>-->
+		<echo msg="Files copied and compressed in build directory OK!" />
+	</target>
+</project>
