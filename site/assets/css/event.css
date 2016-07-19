@@ -1,0 +1,247 @@
+/**
+ *	com_simplecalendar - a simple calendar component for Joomla
+ *  Copyright (C) 2008-2015 Fabrizio Albonico
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *	(at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+table#sc_form tr {
+	border-style : none;
+}
+
+table#sc_form td {
+	border-style : none;
+	padding      : 3px;
+}
+
+.additional_info h2 {
+	font-size : 10px;
+	/*font-weight: bold;*/
+}
+
+dl.sc_detail {
+	margin        : 0 5px;
+	margin-bottom : 15px;
+}
+
+dt.sc_detail {
+	/* margin-right: 5px; */
+	padding       : 0.3em 0;
+	float         : left;
+	font-size     : 1em;
+	font-style    : italic;
+	background    : transparent;
+	border-bottom : 1px solid #ddd;
+	width         : 6em;
+}
+
+dd.sc_detail {
+	display       : block;
+	padding       : 0.3em 0;
+	font-size     : 1em;
+	background    : transparent;
+	z-index       : 10;
+	margin-left   : 5px;
+	margin-bottom : 5px;
+}
+
+table {
+	border-collapse : collapse;
+}
+
+table.sc_search {
+	border    : 0px;
+	margin    : 1px;
+	font-size : 0.9em;
+}
+
+table.sc_search tr {
+	border : 0px;
+}
+
+table.sc_search td {
+	border : 0px;
+}
+
+table.sc_table {
+	border        : 0px;
+	border-bottom : 1px solid black;
+	margin-bottom : 2px;
+}
+
+table.sc_table tr {
+	border-style : none;
+}
+
+table.sc_table td {
+	border-style : none;
+}
+
+td.sc_rows {
+	border-bottom : 1px dotted lightgrey;
+}
+
+button.sc_search {
+	font-size : 0.9em;
+	margin    : 0.9em 0;
+}
+
+.unpublished {
+	color : red;
+}
+
+span#entryinfo {
+	margin : 0 10px;
+	width  : 98%;
+}
+
+th.sc_column_header {
+	font-style : italic;
+}
+
+p.category_colors {
+	border      : 1px solid lightgrey;
+	font-size   : 10px;
+	margin-left : 5px;
+	width       : 98%;
+	padding     : 2px 2px 2px 5px;
+}
+
+div .sc_clear {
+	clear       : both;
+	padding-top : 20px;
+}
+
+.sc_detail_wrapper {
+	width   : 100%;
+	padding : 1em;
+}
+
+.sc_detail_left {
+	margin-bottom : 1em;
+}
+
+.sc_detail_right {
+	margin-bottom : 1em;
+	width         : 90%;
+}
+
+div .sc_map_container {
+	max-width  : 320px;
+	max-height : 320px;
+	margin     : 0 auto;
+}
+
+.sc_map {
+	width           : 100%;
+	overflow        : hidden;
+	display         : block;
+	position        : relative;
+	background-size : cover;
+	height          : 0;
+	padding-bottom  : 100%;
+	box-shadow      : 3px 3px 5px 0px #1d1d1d;
+}
+
+.sc_map img {
+	width       : 320px;
+	height      : 320px;
+	position    : absolute;
+	top         : 50%;
+	left        : 50%;
+	margin-left : -160px;
+	margin-top  : -160px;
+	max-width: inherit;
+}
+
+div .sc_map_description {
+	background : url('../images/transp_60.png');
+	position   : relative;
+	bottom     : 25px;
+	left       : 0px;
+	width      : 100%;
+	color      : white;
+	z-index    : 100;
+	height     : 25px;
+}
+
+div .sc_map_button {
+	padding      : 4px;
+	margin       : 0px;
+	float        : right;
+	margin-right : 5px;
+}
+
+div .sc_info_container {
+	display    : block;
+	clear      : both;
+	margin-top : 10px;
+	border-top : 1px solid lightgrey;
+}
+
+div .sc_info_container span {
+	font-size    : 0.8em;
+	margin-left  : 3px;
+	margin-right : 3px;
+	white-space  : nowrap;
+}
+
+div .sc_social_container {
+	clear         : both;
+	height        : 22px;
+	margin-bottom : 10px;
+	overflow      : visible;
+}
+
+div .sc_social_container div {
+	overflow : visible;
+}
+
+/* To fill the container and nothing else */
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+	width : 100% !important;
+}
+
+/* --------------------------
+wide screen
+-------------------------- */
+
+@media (min-width : 800px) {
+	dt.sc_detail {
+		width : 12em;
+	}
+
+	dd.sc_detail {
+		margin : 0 0 5px 13.5em;
+	}
+
+	.sc_detail_wrapper {
+		overflow : hidden;
+		padding  : 2em 0 1em;
+	}
+
+	.sc_detail_left, .sc_detail_right {
+		float         : left;
+		margin-bottom : 1em;
+		margin-left   : 3%;
+	}
+
+	.sc_detail_left {
+		width : 65%;
+	}
+
+	.sc_detail_right {
+		width : 25%;
+	}
+}

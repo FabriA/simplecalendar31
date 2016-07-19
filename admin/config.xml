@@ -1,0 +1,265 @@
+<config>
+	<fieldset name="gmap"
+	          label="COM_SIMPLECALENDAR_CONFIG_TAB_GMAP"
+	          addfieldpath="/administrator/components/com_simplecalendar/models/fields"
+	>
+		<field
+				name="use_gmap"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_USE_GMAP_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_USE_GMAP_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="address"
+		       type="hidden"
+		       class="inputbox"
+		       label="COM_SIMPLECALENDAR_EVENT_FIELD_ADDRESS_LABEL"
+		       description="COM_SIMPLECALENDAR_EVENT_FIELD_ADDRESS_DESC"/>
+		<field
+				name="gmap_std_latlon"
+				type="gmap"
+				searchfield="address"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_GMAP_STD_LATLON_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_GMAP_STD_LATLON_DESC"
+				default="46,9"/>
+		<field name="gmap_zoom"
+		       type="list"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_GMAP_ZOOM_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_GMAP_ZOOM_DESC"
+		       default="12"
+		>
+			<option value="0">0</option>
+			<option value="4">4</option>
+			<option value="8">8</option>
+			<option value="10">10</option>
+			<option value="12">12</option>
+			<option value="14">14</option>
+			<option value="17">17</option>
+			<option value="20">20</option>
+		</field>
+		<field name="gmap_api_key"
+		       type="text"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_GMAP_API_KEY_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_GMAP_API_KEY_DESC"
+		       default=""/>
+	</fieldset>
+	<fieldset name="formats"
+	          label="COM_SIMPLECALENDAR_CONFIG_TAB_DATETIME"
+	          description="COM_SIMPLECALENDAR_CONFIG_TAB_DATETIME_DESC">
+		<field name="backend_list_date_format"
+		       type="list"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_BACKEND_LIST_DATE_FORMAT_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_BACKEND_LIST_DATE_FORMAT_DESC"
+		       default="d.m.Y">
+			<option value="l, d F Y">DDDD, DD MONTH YY</option>
+			<option value="D, d M Y">DDD, DD MONTH YYYY</option>
+			<option value="d F y">DD MONTH YY</option>
+			<option value="d F Y">DD MONTH YYYY</option>
+			<option value="d M y">DD MON. YY</option>
+			<option value="d M Y">DD MON. YYYY</option>
+			<option value="d.m.y">DD.MM.YY</option>
+			<option value="m.d.y">MM.DD.YY</option>
+			<option value="y.d.m">YY.MM.DD</option>
+			<option value="d.m.Y">DD.MM.YYYY</option>
+			<option value="m.d.Y">MM.DD.YYYY</option>
+			<option value="Y.m.d">YYYY.MM.DD</option>
+			<option value="d-m-y">DD-MM-YY</option>
+			<option value="m-d-y">MM-DD-YY</option>
+			<option value="y-m-d">YY-MM-DD</option>
+			<option value="d-m-Y">DD-MM-YYYY</option>
+			<option value="m-d-Y">MM-DD-YYYY</option>
+			<option value="Y-m-d">YYYY-MM-DD</option>
+			<option value="d/m/y">DD/MM/YY</option>
+			<option value="m/d/y">MM/DD/YY</option>
+			<option value="y/m/d">YY/MM/DD</option>
+			<option value="d/m/Y">DD/MM/YYYY</option>
+			<option value="m/d/Y">MM/DD/YYYY</option>
+			<option value="Y/m/d">YYYY/MM/DD</option>
+		</field>
+		<field
+				name="date_short_format"
+				type="list"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_DATE_FORMAT_SHORT_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_DATE_FORMAT_SHORT_DESC">
+			<option value="d.m">DD.MM</option>
+			<option value="m.d">MM.DD</option>
+			<option value="d-m-y">DD-MM</option>
+			<option value="m-d-y">MM-DD</option>
+			<option value="d/m/y">DD/MM</option>
+			<option value="m/d/y">MM/DD</option>
+		</field>
+		<field
+				name="date_long_format"
+				type="list"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_DATE_FORMAT_LONG_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_DATE_FORMAT_LONG_DESC"
+				default="D, d M Y">
+			<option value="l, d F Y">DDDD DD MONTH YY</option>
+			<option value="D, d M Y">DDD DD MONTH YYYY</option>
+			<option value="d F y">DD MONTH YY</option>
+			<option value="d F Y">DD MONTH YYYY</option>
+			<option value="d M y">DD MON. YY</option>
+			<option value="d M Y">DD MON. YYYY</option>
+			<option value="d.m.y">DD.MM.YY</option>
+			<option value="m.d.y">MM.DD.YY</option>
+			<option value="y.d.m">YY.MM.DD</option>
+			<option value="d.m.Y">DD.MM.YYYY</option>
+			<option value="m.d.Y">MM.DD.YYYY</option>
+			<option value="Y.m.d">YYYY.MM.DD</option>
+			<option value="d-m-y">DD-MM-YY</option>
+			<option value="m-d-y">MM-DD-YY</option>
+			<option value="y-m-d">YY-MM-DD</option>
+			<option value="d-m-Y">DD-MM-YYYY</option>
+			<option value="m-d-Y">MM-DD-YYYY</option>
+			<option value="Y-m-d">YYYY-MM-DD</option>
+			<option value="d/m/y">DD/MM/YY</option>
+			<option value="m/d/y">MM/DD/YY</option>
+			<option value="y/m/d">YY/MM/DD</option>
+			<option value="d/m/Y">DD/MM/YYYY</option>
+			<option value="m/d/Y">MM/DD/YYYY</option>
+			<option value="Y/m/d">YYYY/MM/DD</option>
+		</field>
+		<field
+				name="time_format"
+				type="list"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_TIME_FORMAT_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_TIME_FORMAT_LABEL_DESC"
+				default="H:i">
+			<option value="H:i">hh:mm (24h)</option>
+			<option value="H:i:s">hh:mm:ss (24h)</option>
+			<option value="h:i A">hh:mm (12h)</option>
+			<option value="h:i:s A">hh:mm:ss (12h)</option>
+			<option value="g:i A">h:mm (12h)</option>
+			<option value="g:i:s A">h:mm:ss (12h)</option>
+		</field>
+		<field name="minute_split"
+		       type="list"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_DATETIME_MINUTE_SPLIT_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_DATETIME_MINUTE_SPLIT_DESC"
+		       default="4"
+		>
+			<option value="2">COM_SIMPLECALENDAR_CONFIG_FIELD_DATETIME_MINUTE_SPLIT_2</option>
+			<option value="4">COM_SIMPLECALENDAR_CONFIG_FIELD_DATETIME_MINUTE_SPLIT_4</option>
+			<option value="6">COM_SIMPLECALENDAR_CONFIG_FIELD_DATETIME_MINUTE_SPLIT_6</option>
+			<option value="12">COM_SIMPLECALENDAR_CONFIG_FIELD_DATETIME_MINUTE_SPLIT_12</option>
+			<option value="60">COM_SIMPLECALENDAR_CONFIG_FIELD_DATETIME_MINUTE_SPLIT_60</option>
+		</field>
+		<field
+				name="vcal_encoding"
+				type="text"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_VCAL_ENCODING_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_VCAL_ENCODING_DESC"
+				default="UTF-8"
+				class="input-small"/>
+	</fieldset>
+	<fieldset name="layout"
+	          label="COM_SIMPLECALENDAR_CONFIG_TAB_LAYOUT"
+	          addfieldpath="/administrator/components/com_simplecalendar/models/fields"
+	>
+		<field name="customfield1_label"
+		       type="text"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_CUSTOMFIELD1_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_CUSTOMFIELD1_DESC"/>
+
+		<field name="customfield2_label"
+		       type="text"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_CUSTOMFIELD2_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_CUSTOMFIELD2_DESC"/>
+
+		<field name="currency"
+		       type="text"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_CURRENCY_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_CURRENCY_DESC"
+		       default="$"/>
+	</fieldset>
+	<fieldset name="email"
+	          label="COM_SIMPLECALENDAR_CONFIG_TAB_EMAIL"
+	          addfieldpath="/administrator/components/com_simplecalendar/models/fields"
+	>
+		<field name="use_frontend_submission_email"
+		       type="radio"
+		       class="btn-group"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_USE_FRONTEND_SUBMISSION_EMAIL_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_USE_FRONTEND_SUBMISSION_EMAIL_DESC"
+		       default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="send_notifications_to"
+		       type="email"
+		       class="inputbox"
+		       size="64"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_SEND_NOTIFICATIONS_TO_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_SEND_NOTIFICATIONS_TO_DESC"
+		       validate="email"/>
+	</fieldset>
+	<fieldset name="antispam"
+	          label="COM_SIMPLECALENDAR_CONFIG_TAB_ANTISPAM">
+
+		<field name="frontend_approve"
+		       type="radio"
+		       class="btn-group"
+		       label="COM_SIMPLECALENDAR_CONFIG_FIELD_FRONTEND_APPROVE_LABEL"
+		       description="COM_SIMPLECALENDAR_CONFIG_FIELD_FRONTEND_APPROVE_DESC"
+		       default="0"
+		>
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field
+				name="captcha"
+				type="plugins"
+				folder="captcha"
+				default=""
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_CAPTCHA_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_CAPTCHA_DESC"
+				filter="cmd"
+		>
+			<option value="">JOPTION_USE_DEFAULT</option>
+			<option value="0">JOPTION_DO_NOT_USE</option>
+		</field>
+	</fieldset>
+	<fieldset name="permissions"
+	          label="JCONFIG_PERMISSIONS_LABEL"
+	          description="JCONFIG_PERMISSIONS_DESC"
+	>
+		<field
+				name="rules"
+				type="rules"
+				label="JCONFIG_PERMISSIONS_LABEL"
+				class="inputbox"
+				filter="rules"
+				validate="rules"
+				component="com_simplecalendar"
+				section="component"
+		/>
+	</fieldset>
+	<fieldset name="information"
+	          label="COM_SIMPLECALENDAR_CONFIG_TAB_INFO"
+	          addfieldpath="/administrator/components/com_simplecalendar/models/fields"
+	>
+		<field
+				name="infobox"
+				type="info"
+				label=""
+		/>
+		<field
+				name="validation_key_domain"
+				type="text"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_BACKEND_VALIDATION_KEY_DOMAIN_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_BACKEND_VALIDATION_KEY_DOMAIN_DESC"
+		/>
+		<field
+				name="validation_key"
+				type="text"
+				label="COM_SIMPLECALENDAR_CONFIG_FIELD_BACKEND_VALIDATION_KEY_LABEL"
+				description="COM_SIMPLECALENDAR_CONFIG_FIELD_BACKEND_VALIDATION_KEY_DESC"
+		/>
+	</fieldset>
+</config>
